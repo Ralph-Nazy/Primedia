@@ -23,7 +23,8 @@
      $('#audio').attr("src", audio_src);
      $('#audio').attr("type", media_type);
      $('#audio').attr("controls", controls);
-     $('#title').text(author);
+     $('#title').text(title);
+     $('#author').text(author);
      $('#provider_name').text(provider_name);
      $('#desc').text(description);
 
@@ -43,6 +44,7 @@
 <div class="container">
     <div id="imageCreated"></div>
     <h1 id="title"></h1>
+    <h2 id="author"></h1>
     <h3 id="provider_name"></h3>
     <p id="desc"></p>
   <audio id="audio"></audio>
