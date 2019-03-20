@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Audio Player | Primedia</title>	
+  <style type="text/css">
+  	#audio_list{margin: 0 auto; width: 42em;}
+  	.left {width: 50%; float: left;}
+  	.right{width: 48%; float: left; padding: .5%;}
+  	.small-text {font-size: 10px; font-weight: bold;}
+  	img { height: 300px;}
+  	h1 {font-size: 24px;}
+  </style>
+</head>
+<body>
+<div id="audio_list"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.1/handlebars.min.js"></script>
+ 	<script id="audio-template" type="text/x-handlebars-template"> 
+   {{#each audios}}
+   		<div class="left">
+   			<div class="img"><img src="{{thumb}}"></div>
+   		</div>
+   		<div class="right">
+   		<h1><a href="{{url}}" target="_blank">{{title}} </a></h1>
+   		<p>{{description}}</p>
+		<audio id="audio" src="{{audio_url}}" controls="{{controls}}" type="{{media_type}}"></audio>
+		<span class="small-text">Host: {{author}}  Sponsored by : {{provider_name}}</span>
+   		</div> 
+    {{/each}}
+  </script>
+<script src="javascript.js"></script>
+</body>
+</html> 
